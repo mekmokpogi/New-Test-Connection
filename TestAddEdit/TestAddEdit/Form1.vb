@@ -3,7 +3,7 @@ Public Class Form1
 
     Public Sub ConnectToDatabase()
         Dim connectionString As String = "Host=10.0.21.71;Port=5432;Username=postgres;Password=root;Database=hms"
-        Dim query As String = "SELECT * FROM shmc.patient_details Limit 100"
+        Dim query As String = "SELECT * FROM shmc.patient_details Limit 10"
 
         Using conn As New NpgsqlConnection(connectionString)
             Try
@@ -31,5 +31,6 @@ Public Class Form1
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
 End Class
 
